@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Template literals
+        </title>
+        <style>
+            h1{
+                color: deeppink;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Template literals</h1>
+<!--        <script type="text/javascript" src="code.js"></script>-->
+        <script>
+        var firstname = 'Eshan';
+        var lastname = 'Behal';
+            
+            console.log('Hey ' + firstname + ' ' + lastname + ' !');//in es5
+            
+            //using literals
+            
+            console.log(`Hey ${firstname} ${lastname} !`);
+            
+//            ES5
+var text5 = 'Here is \na new line';
+            console.log(text5);
+//ES6
+const text6 = `Here is 
+a new line`;
+console.log(text6);
+        </script>
+    </body>
+</html>
