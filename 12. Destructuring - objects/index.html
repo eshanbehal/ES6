@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Destructuring - Objects
+        </title>
+        <style>
+            h1{
+                color: deeppink;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Destructuring - Objects</h1>
+<!--        <script type="text/javascript" src="code.js"></script>-->
+        <script>
+        //ES6
+const person = {name: 'John', age: 41};
+const {name: n, age: a} = person;
+console.log(n, a);
+
+//deep matching
+const {country: c, address:{postcode: p, housenumber: hn}} = {country: 'UK', address:{postcode: 'S54ZZ', housenumber: 1}};
+console.log(c, p, hn);
+
+        </script>
+    </body>
+</html>
