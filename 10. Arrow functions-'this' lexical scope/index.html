@@ -66,6 +66,30 @@
             console.log(this.innerHTML); //dosent work in es6 like that it gives unidentified. as this is in lexical scope and refers to the window.
         }); 
             
+            //ES5
+            
+            var player5 = {
+              name : 'Eshan Behal',
+                click : function(){
+                   
+                   var player = this; document.getElementById('button5').addEventListener('click', function(){
+                        console.log(player.name);
+                    });
+                }
+            };
+            player5.click();
+            
+            //ES6
+            
+            var player6 = {
+              name : 'Esha Behal',
+                click : function(){ document.getElementById('button6').addEventListener('click', () => {
+                        console.log(this.name);
+                                  });
+                }
+            };
+            player6.click();
+            
         </script>
     </body>
 </html>
