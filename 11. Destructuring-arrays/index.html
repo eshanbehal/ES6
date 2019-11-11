@@ -28,6 +28,18 @@
         console.log(value);
         console.log(length);
         
+        //swapping values of two variables.
+        
+        let [a, b] = [1, 2];
+        [a, b]= [b, a];
+        console.log(a, b);
+        
+        //default values
+        
+        let list = ['newyork'];
+        let [city, country = 'usa'] = list;
+        console.log(city, country);
+        
         </script>
     </body>
 </html>
