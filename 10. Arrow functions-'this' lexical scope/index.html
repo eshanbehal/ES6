@@ -47,6 +47,25 @@
                 return x * 3;
             });
             console.log(list2);
+            
+            //ES6
+            
+            var list = [1,3];
+            var list3 = list.map(x => x * 4);
+            console.log(list3);
+            
+            //this in es6
+            
+            //ES5
+            document.getElementById('button3').addEventListener('click', function(){
+            console.log(this.innerHTML);
+        }); 
+            
+            //ES6
+            document.getElementById('button4').addEventListener('click',() => {
+            console.log(this.innerHTML); //dosent work in es6 like that it gives unidentified. as this is in lexical scope and refers to the window.
+        }); 
+            
         </script>
     </body>
 </html>
