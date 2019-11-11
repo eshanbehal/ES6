@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Destructuring - Arrays
+        </title>
+        <style>
+            h1{
+                color: deeppink;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Destructuring - Arrays</h1>
+<!--        <script type="text/javascript" src="code.js"></script>-->
+        
+    <script>
+        var x = 1;
+        var y = 2;
+        function processString(x){
+            return[x, x.length];
+        }   
+        console.log(processString('eshan behal'));
+        
+        const [value,length] = processString('eshan behal12345');
+        console.log(value);
+        console.log(length);
+        
+        </script>
+    </body>
+</html>
