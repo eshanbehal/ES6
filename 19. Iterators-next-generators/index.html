@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Iterators - next - generators
+        </title>
+        <style>
+            h1{
+                color: deeppink;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Iterators - next - generators</h1>
+<!--        <script type="text/javascript" src="code.js"></script>-->
+        
+        <script>
+        const BASKET = ['strawberry', 'apple', 'yogurt', 'bread'];
+
+
+//iteration
+for(const x of BASKET){
+    console.log(x);
+}
+
+//BASKET is iterable
+
+//an iterator
+//next() -> {value: , done: }
+
+//built in method creating an iterator out of an array
+            let arrIt = BASKET.entries();
+            console.log(arrIt);
+            
+            console.log(arrIt.next());
+            console.log(JSON.stringify(arrIt.next()));
+            console.log(JSON.stringify(arrIt.next()));
+            console.log(JSON.stringify(arrIt.next()));
+            console.log(JSON.stringify(arrIt.next()));
+        </script>
+    </body>
+</html>
