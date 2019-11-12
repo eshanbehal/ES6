@@ -39,6 +39,14 @@
                 console.log(y);
             }
             printAll2(1,2,3);
+            
+            //ES6
+            function pCheck(firstname, lastname, ...items){
+                const belongings = items.length>0? items: 'none';
+                console.log(`Passenger ${firstname} ${lastname}.
+Belongings: ${items}`);
+            }
+            pCheck('Eshan', 'Behal', 'Bag', 'Suitcase');
         </script>
     </body>
 </html>
