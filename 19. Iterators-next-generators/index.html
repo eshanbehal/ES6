@@ -31,7 +31,17 @@ for(const x of BASKET){
 //next() -> {value: , done: }
 
 //built in method creating an iterator out of an array
-            let arrIt = BASKET.entries();
+//            let arrIt = BASKET.entries();
+//            console.log(arrIt);
+//            
+//            console.log(arrIt.next());
+//            console.log(JSON.stringify(arrIt.next()));
+//            console.log(JSON.stringify(arrIt.next()));
+//            console.log(JSON.stringify(arrIt.next()));
+//            console.log(JSON.stringify(arrIt.next()));
+//            
+            //for only sowing values.
+            let arrIt = BASKET.values();
             console.log(arrIt);
             
             console.log(arrIt.next());
@@ -39,6 +49,43 @@ for(const x of BASKET){
             console.log(JSON.stringify(arrIt.next()));
             console.log(JSON.stringify(arrIt.next()));
             console.log(JSON.stringify(arrIt.next()));
+            
+//            //for only showing indexes.
+//            let arrIt = BASKET.keys();
+//            console.log(arrIt);
+//            
+//            console.log(arrIt.next());
+//            console.log(JSON.stringify(arrIt.next()));
+//            console.log(JSON.stringify(arrIt.next()));
+//            console.log(JSON.stringify(arrIt.next()));
+//            console.log(JSON.stringify(arrIt.next()));
+            
+            //let's create a function that makes an iterator out of an array
+            
+            const createIterator = array => {
+    let index = 0;
+    return {
+        next(){
+            if(index < array.length){
+                return{
+                    value: array[index++],
+                    done: false
+                }
+            }else{
+                return {
+                    done: true
+                }
+            }
+        } 
+    };
+};
+
+const arrIt2 = createIterator([1,2,3]);
+console.log(arrIt2.next());
+console.log(arrIt2.next());
+console.log(arrIt2.next());
+console.log(arrIt2.next());
+
         </script>
     </body>
 </html>
