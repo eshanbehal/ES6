@@ -86,6 +86,18 @@ console.log(arrIt2.next());
 console.log(arrIt2.next());
 console.log(arrIt2.next());
 
+            //generator functions: factory of iterators
+
+function* genIterator(){
+    console.log('running');
+    yield 1; //pause generator
+    console.log('running');
+    yield 2;
+}
+const it = genIterator();
+console.log(it.next());
+console.log(it.next());
+console.log(it.next());
         </script>
     </body>
 </html>
