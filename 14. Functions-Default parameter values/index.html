@@ -35,11 +35,12 @@
             }
             greet(['Eshan']);
             
-            function addup({item: item = 'mangoes', price: price = 15, quantity: quantity = 20}){
+            function addup({item = 'mangoes', price = 15, quantity = 20} = {}){
                 console.log(`please pay $${price*quantity} for ${quantity} ${item}`);
             }
             addup({item: 'bananas', price: 2, quantity: 10});
             addup({});
+            addup();
         </script>
     </body>
 </html>
