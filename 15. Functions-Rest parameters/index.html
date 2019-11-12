@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Functions - Rest parameters
+        </title>
+        <style>
+            h1{
+                color: deeppink;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Functions - Rest parameters</h1>
+<!--        <script type="text/javascript" src="code.js"></script>-->
+        
+        <script>
+        //ES5
+            function printAll(){
+                var arr = [];
+                for(var i =0; i < arguments.length; i++){
+                    arr.push(arguments[i]);
+                }
+                return arr;
+            }
+            console.log(printAll(1,2));
+            
+//            //ES6 using rest parameters(...)
+//            function printAll2(...x){
+//                console.log(x);
+//            }
+//            printAll2(1,2,3);
+            
+            //ES6 using rest parameters(...)
+            function printAll2(x, ...y){
+                console.log(x);
+                console.log(y);
+            }
+            printAll2(1,2,3);
+        </script>
+    </body>
+</html>
