@@ -47,6 +47,15 @@
 Belongings: ${items}`);
             }
             pCheck('Eshan', 'Behal', 'Bag', 'Suitcase');
+            
+            //ES5
+            function pCheck(firstname, lastname){
+                console.log(arguments);
+                var z = Array.prototype.slice.call(arguments, 2);
+                var belongings = z.length> 0?z: 'none';
+                console.log('Passenger: ' + firstname + lastname + '\n' + 'Belongings: ' + belongings);
+            }
+            pCheck('Esha', 'Behl', 'Bagpack', 'Suitcases');
         </script>
     </body>
 </html>
