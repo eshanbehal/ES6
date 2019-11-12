@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Functions - Default parameter values
+        </title>
+        <style>
+            h1{
+                color: deeppink;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Functions - Default parameter values</h1>
+<!--        <script type="text/javascript" src="code.js"></script>-->
+        <script>
+        //ES5
+            function increment(x, y){
+                return (y == undefined)? (x + 1): (x+y);
+            }
+            console.log(increment(5));
+            console.log(increment(5,3));
+            
+             //ES6
+            
+            const increment2 = (x, y = 1) => x + y;
+            console.log(increment2(5));
+            console.log(increment2(5,4));
+        </script>
+    </body>
+</html>
