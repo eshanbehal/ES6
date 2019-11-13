@@ -71,7 +71,26 @@
             console.log(myMap.get(NaN));
             console.log(y === NaN);
             
+            //iteration with for of
+            for(const [key, value] of myMap){
+                console.log(`key: ${key} -> value: ${value}`);
+            }
             
+            //forEach
+            myMap.forEach((key, value) => {
+              console.log(`key: ${key} -> value: ${value}`);  
+            });
+            
+            //creating a iterator
+            //const k = myMap.entries();
+            const k = myMap.keys();
+            //const k = myMap.values();
+            console.log(k);
+            console.log(k.next());
+            console.log(k.next());
+            console.log(k.next());
+            console.log(k.next());
+            console.log(k.next());
         </script>
     </body>
 </html>
