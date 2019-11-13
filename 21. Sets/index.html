@@ -43,6 +43,24 @@
                 make: 'samsung',
                 model: 's7'
             }));
+            
+            console.log(mySet.size);
+//            mySet.delete(1);
+//            console.log(mySet);
+//            mySet.clear();
+//            console.log(mySet);
+            
+            //for of loop
+            for(const value of mySet){
+                console.log(value);
+            }
+            
+            for(const [key, value] of mySet.entries()){
+                console.log(key, value);
+            }
+            for(const value of mySet.values()){
+                console.log(value);
+            }
         </script>
     </body>
 </html>
