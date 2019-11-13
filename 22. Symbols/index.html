@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Symbols
+        </title>
+        <style>
+            h1{
+                color: deeppink;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Symbol</h1>
+<!--        <script type="text/javascript" src="code.js"></script>-->
+        
+        <script>
+        //why do you need symbols:
+const OFFSTATE = Symbol('off');
+const ONSTATE = Symbol('on');
+const feature1 = Symbol('feature');
+const feature2 = Symbol('feature');
+let car = {
+    make: 'Audi',
+    [feature1]: 'cruise control',
+    [feature2]: 'air-conditionning',
+    state: ONSTATE,
+    speed: 20,
+    turnon(){
+        this.state = ONSTATE;
+    },
+    turnoff(){
+        this.state = OFFSTATE;
+    },
+    accelerate(){
+        if(this.state === ONSTATE){
+            this.speed += 10;
+        }
+    }
+    
+};
+
+console.log(car); //only one feature is listed
+//this can be solved by making the object keys unique
+car.accelerate();
+console.log(car);
+        </script>
+    </body>
+</html>
