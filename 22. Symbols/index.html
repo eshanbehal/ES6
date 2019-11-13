@@ -46,6 +46,18 @@ console.log(car); //only one feature is listed
 //this can be solved by making the object keys unique
 car.accelerate();
 console.log(car);
+            
+            //Symbols are new in ES6. They are primitive type.
+const mySymbol = Symbol('Symbol Description');
+console.log(mySymbol);
+console.log(mySymbol.toString());
+//console.log(mySymbol + 'hello');
+
+
+const symbol1 = Symbol('a');
+const symbol2 = Symbol('a');
+console.log(symbol1 === symbol2);//false
+console.log(typeof symbol1);//symbol
         </script>
     </body>
 </html>
