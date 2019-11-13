@@ -58,6 +58,15 @@ const symbol1 = Symbol('a');
 const symbol2 = Symbol('a');
 console.log(symbol1 === symbol2);//false
 console.log(typeof symbol1);//symbol
+            
+            console.log(Object.keys(car));
+console.log(Object.getOwnPropertyNames(car));
+for (const key in car){
+    console.log(key);
+}
+
+//OwnPropertySymbols
+console.log(Object.getOwnPropertySymbols(car));
         </script>
     </body>
 </html>
