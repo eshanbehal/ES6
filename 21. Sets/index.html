@@ -29,6 +29,20 @@
             mySet.add(phone);
             mySet.add(document.body);
             console.log(mySet);
+            
+            //pass an iterable object to the set constructor
+            let mySet2 = new Set(['hi', 1, 'john']);
+            console.log(mySet2);
+            
+            let mySet3 = new Set('hello');
+            console.log(mySet3);
+            
+            //similar methods to map.
+            console.log(mySet.has(phone));
+            console.log(mySet.has({
+                make: 'samsung',
+                model: 's7'
+            }));
         </script>
     </body>
 </html>
