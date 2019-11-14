@@ -37,6 +37,18 @@ console.log(x.indexOf(7));
 //check if a value exists
 console.log(x.includes(2));
 
+            //copy in position 1 the chunk between 0 and 1
+console.log(x);
+x.copyWithin(1, 0, 2);
+console.log(x);
+//copy in position 2 the chunk between 1 and the end
+x.copyWithin(2, 1);
+console.log(x);
+//copy in position 3 the first value of the array
+x.copyWithin(3);
+console.log(x);
+
+
         </script>
     </body>
 </html>
