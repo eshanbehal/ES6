@@ -48,7 +48,27 @@ console.log(mySmartphone);
 console.log(mySmartphone.extendWarranty);
 mySmartphone.extendWarranty(3);
 console.log(mySmartphone);
- 
+
+            //ES6
+            
+            class phone6{
+    constructor(make, model, _warranty, colour){
+        this.make = make;
+        this.model = model;
+        this._warranty = _warranty || 24;
+        this.colour = colour || 'white';
+        this.log = [];
+    }
+    extendWarranty(x){
+        this.warranty += x;
+    }
+                
+                const myPhone6 = new phone6('Apple', 'Iphone7', 11, 'black');
+console.log(myPhone6);
+
+console.log(typeof phone6);//function
+
+            }
         </script>
     </body>
 </html>
