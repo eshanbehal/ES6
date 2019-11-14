@@ -48,6 +48,17 @@ console.log(x);
 x.copyWithin(3);
 console.log(x);
 
+//fill x with 4's from position 1 to 1
+x.fill(4, 1, 2);
+console.log(x);
+
+//fill x with {name:'Mark'} from position 2 to the end
+//const y = {name:'Mark'};
+x.fill({name:'Mark'}, 2);
+console.log(x);
+//check if values x[2] and x[3] are equal
+console.log(x[2] === x[3]);//true because you are passing a reference only
+console.log({name:'Mark'} === {name:'Mark'});
 
         </script>
     </body>
