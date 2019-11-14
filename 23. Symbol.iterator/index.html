@@ -41,6 +41,12 @@ const it = basket[Symbol.iterator]();
 //console.log(it.next());
 //console.log(it.next());
 //console.log(it.next());
+            
+            let iteration = it.next();
+            while(!iteration.done){
+                console.log(iteration.value);
+                iteration = it.next();
+            }
 
         </script>
     </body>
