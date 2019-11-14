@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Symbol.iterator
+        </title>
+        <style>
+            h1{
+                color: deeppink;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Symbol.iterator</h1>
+<!--        <script type="text/javascript" src="code.js"></script>-->
+        
+        <script>
+        const basket = ['apple', 'blueberry', 'bread'];
+
+//for of loop
+for (const value of basket){
+    console.log(value);
+}
+
+console.log(Symbol.iterator);
+console.log(typeof Symbol.iterator);
+
+console.log(basket);
+
+console.log(basket[Symbol.iterator]());
+
+console.log(basket.entries());
+
+const it = basket[Symbol.iterator]();
+//const it = basket.entries();
+//const it = basket.keys();
+//const it = basket.values();
+//console.log(it.next());
+//console.log(it.next());
+//console.log(it.next());
+//console.log(it.next());
+
+        </script>
+    </body>
+</html>
