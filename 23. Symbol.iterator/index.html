@@ -47,6 +47,27 @@ const it = basket[Symbol.iterator]();
                 console.log(iteration.value);
                 iteration = it.next();
             }
+            
+            //create a custom iterator of an object
+const obj = {
+    *[Symbol.iterator](){
+        for(let i = 1; i < 3; i ++){
+            yield i;
+        }
+    }
+}
+
+const it2 = obj[Symbol.iterator]();
+console.log(it2.next());
+console.log(it2.next());
+console.log(it2.next());
+
+//treat the obj objects as iterable
+for(const x of obj){
+    console.log(x);
+}
+console.log([...obj]);
+
 
         </script>
     </body>
