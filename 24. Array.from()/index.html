@@ -62,6 +62,20 @@ const obj = {length: 3};
 console.log(Array.from(obj));
 console.log(Array.from(obj, value => 1));
 console.log(Array.from(obj, (value, index) => index * 2));
+            
+            //create an array from Sets and Maps (iterable objects)
+let mySet = new Set();
+mySet.add('John');
+mySet.add(1);
+console.log(mySet);
+console.log(mySet.size);
+console.log(Array.from(mySet));
+
+
+const myMap = new Map([[1,2], [3,4]]);
+console.log(myMap);
+console.log(Array.from(myMap));
+
         </script>
     </body>
 </html>
