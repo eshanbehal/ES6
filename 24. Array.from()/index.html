@@ -51,6 +51,17 @@ console.log(Array.from(str));
     console.log(Array.from(arguments));
 }
 g(1, 2);
+            
+            //use the optional map function
+let str2 = 'strawberry';
+console.log(Array.from(str2, x => x + ','));
+console.log(Array.from([1, 2, 3], x => x * 2));
+
+//from any object with a length property
+const obj = {length: 3};
+console.log(Array.from(obj));
+console.log(Array.from(obj, value => 1));
+console.log(Array.from(obj, (value, index) => index * 2));
         </script>
     </body>
 </html>
