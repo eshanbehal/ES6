@@ -33,6 +33,19 @@ console.log(str.map);
 console.log(Array.prototype.map.call(str, function(x){
     return x + 'a';
 }));
+            
+            const collection = document.getElementsByClassName('blue');
+console.log(collection.length);
+console.log(collection);
+console.log(collection.slice);
+//ES5:
+console.log(Array.prototype.slice.call(collection, 1, 3));
+
+//Create an array from a collection
+console.log(Array.from(collection));
+//Create an array from a string
+console.log(Array.from(str));
+
         </script>
     </body>
 </html>
